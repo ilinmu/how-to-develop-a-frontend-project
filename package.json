@@ -1,9 +1,46 @@
 {
+  "name": "webpack-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://ilinmu.github.io/how-to-develop-a-frontend-project",
   "scripts": {
-    "ci": "cz"
+    "ci": "cz",
+    "start": "webpack serve --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "cz-conventional-changelog": "3.3.0"
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.8",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "chalk": "^4.1.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^5.2.4",
+    "css-minimizer-webpack-plugin": "^2.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "html-webpack-plugin": "^5.2.0",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.13",
+    "postcss-loader": "^5.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "sass-loader": "^11.0.1",
+    "speed-measure-webpack-plugin": "^1.4.2",
+    "style-loader": "^2.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.7.3"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "config": {
     "commitizen": {
