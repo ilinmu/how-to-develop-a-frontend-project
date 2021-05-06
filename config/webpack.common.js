@@ -13,10 +13,6 @@ module.exports = {
     // 是否清理输出
     clean: true,
   },
-  cache: {
-    // 使用持久化缓存
-    type: 'filesystem', //memory:使用内容缓存 filesystem：使用文件缓存
-  },
   devServer: {},
   module: {
     rules: [
@@ -47,7 +43,6 @@ module.exports = {
           },
           'postcss-loader',
         ],
-        use: ['style-loader', 'css-loader'],
       },
       {
         test: /\.(scss|sass)$/,
