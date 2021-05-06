@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './todoList.scss';
 
 const TodoList = () => {
   const [todos, setTodos] = useState([
@@ -24,15 +25,22 @@ const TodoList = () => {
     setValue('');
   }
   return (
-    <>
-      <ul>
+    <div className={styles.wrap}>
+      <h3 className={styles.title}>待办</h3>
+      <ul className={styles.list}>
         {todos.map((item) => (
-          <li key={item.id}>{item?.text}</li>
+          <li
+            key={item.id}
+          >
+            {item?.text}
+          </li>
         ))}
       </ul>
-      <input type="text" value={value} onChange={handleInputChange} />
-      <button onClick={addTodo}>添加 todo</button>
-    </>
+      <div className={styles.operate}>
+        <input type="text" value={value} onChange={handleInputChange} />
+        <button onClick={addTodo}>添 加</button>
+      </div>
+    </div>
   )
 }
 

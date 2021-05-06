@@ -1,0 +1,53 @@
+html, body, ul {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10%;
+  background: #6a7ece;
+  overflow: hidden;
+}
+.title {
+  color: #fff;
+}
+.list {
+  max-height: 80%;
+  overflow-y: auto;
+  list-style: none;
+  li {
+    height: 36px;
+    line-height: 36px;
+    border-radius: 4px;
+    margin-top: 6px;
+    background: #fff;
+    text-indent: 20px;
+    input {
+      margin: 0 20px;
+    }
+  }
+}
+.operate {
+  height: 36px;
+  margin-top: 8px;
+  display: flex;
+  width: 100%;
+  input, button {
+    line-height: 36px;
+    border: none;
+  }
+  input {
+    flex: 1;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    font-size: 14px;
+    text-indent: 20px;
+  }
+  button {
+    cursor: pointer;
+    flex: 0 1 80px;
+    border-radius: 0 4px 4px 0;
+  }
+}
