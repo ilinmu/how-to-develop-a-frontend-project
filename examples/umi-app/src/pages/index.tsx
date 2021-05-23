@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch, useStore } from 'umi';
+import { useSelector, useDispatch } from 'umi';
 import {
   Button,
 } from 'antd';
@@ -12,32 +12,44 @@ type User = {
   age: number;
 }
 
-const Index = () => {
+type Store = {
+  name: string;
+  count: number;
+}
+
+type DefaultState = {
+  index: Store;
+}
+
+export interface IndexProps {
+  index: Store;
+}
+
+const Index: React.FC<IndexProps> = () => {
   const [count, setCount] = useState(0);
   const [user, setUser] = useState<User | null>(null);
   // const [user, setUser] = useState({} as User);
   const [userList, setUserList] = useState<Array<User>>([]);
   // const [userList, setUserList] = useState([] as User[]);
 
-  const name = useSelector(state => state.index.name);
-  const storeCount = useSelector(state => state.index.count);
+  const storeCount = useSelector<DefaultState>(state => state.index.count) as number;
   const dispatch = useDispatch()
-  
+
   // 发起请求
-  useEffect(()=>{
+  useEffect(() => {
     dispatch({
-      type:'index/add',
+      type: 'index/add',
       payload: {
         count: storeCount + 2,
       }
     })
-  },[count]);
+  }, [count]);
 
   const onClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     setCount(count + 1);
   };
 
-  return(
+  return (
     <div>
       <h2>state 自增时，修改 store {storeCount}</h2>
       <Button onClick={onClick}>state自增{count}</Button>
