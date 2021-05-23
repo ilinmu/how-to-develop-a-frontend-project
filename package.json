@@ -5,9 +5,9 @@
   "main": "index.js",
   "homepage": "https://ilinmu.github.io/how-to-develop-a-frontend-project",
   "scripts": {
-    "ci": "cz",
-    "start": "webpack serve --config config/webpack.dev.js",
-    "build": "webpack --config config/webpack.prod.js",
+    "commit": "cz",
+    "start": "webpack serve --config ./examples/webpack-app/config/webpack.dev.js",
+    "build": "webpack --config ./examples/webpack-app/config/webpack.prod.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -3,11 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // 输入
-  entry: '/src/index.js',
+  entry: path.resolve(__dirname, '../src/index.js'),
   // 输出
   output: {
     // 输出路径
-    path: path.resolve(__dirname, '../dist'),
+    path: path.resolve(__dirname, '../../../dist'),
     // 资源输出路径及名称
     assetModuleFilename: 'assets/[hash][ext][query]',
     // 是否清理输出
@@ -84,7 +84,7 @@ module.exports = {
   // 插件
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'public/index.html',
+      template: path.resolve(__dirname, '../public/index.html'),
     }),
   ],
 };
