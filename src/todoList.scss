@@ -23,9 +23,12 @@ html, body, ul {
     border-radius: 4px;
     margin-top: 6px;
     background: #fff;
-    text-indent: 20px;
-    input {
+    text-indent: 10px;
+    input[type="text"] {
       margin: 0 20px;
+    }
+    input[type="checkbox"] {
+      margin: 0 10px;
     }
   }
 }
