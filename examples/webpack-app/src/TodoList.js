@@ -33,7 +33,7 @@ const TodoList = () => {
   return (
     <div className={styles.wrap}>
       <h3 className={styles.title}>待办</h3>
-      <ul className={styles.list}>
+      <ul className={styles.todosList}>
         {todos.map((item) => (
           <li key={item.id}>
             <input type="checkbox" onChange={(e) => handleCheckboxChange(e, item)} />
@@ -46,7 +46,7 @@ const TodoList = () => {
         <button onClick={addTodo}>添 加</button>
       </div>
       <h3 className={styles.title}>已完成</h3>
-      <ul className={styles.list}>
+      <ul className={styles.donesList}>
         {dones.map((item) => (
           <li key={`${item.id}-${item.text}`}>
             <input type="checkbox" readOnly checked />
