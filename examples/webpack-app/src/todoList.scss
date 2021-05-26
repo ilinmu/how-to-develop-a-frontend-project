@@ -41,14 +41,14 @@ html, body, ul {
     line-height: 36px;
     border: none;
   }
-  input {
+  .todoInput {
     flex: 1;
     border-radius: 4px 0 0 4px;
     outline: none;
     font-size: 14px;
     text-indent: 20px;
   }
-  button {
+  .addBtn {
     cursor: pointer;
     flex: 0 1 80px;
     border-radius: 0 4px 4px 0;

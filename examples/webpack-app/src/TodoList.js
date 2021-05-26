@@ -36,14 +36,24 @@ const TodoList = () => {
       <ul className={styles.todosList}>
         {todos.map((item) => (
           <li key={item.id}>
-            <input type="checkbox" onChange={(e) => handleCheckboxChange(e, item)} />
-            {item?.text}
+            <input
+              type="checkbox"
+              onChange={(e) => handleCheckboxChange(e, item)}
+            />
+            <span>{item?.text}</span>
           </li>
         ))}
       </ul>
       <div className={styles.operate}>
-        <input type="text" placeholder="add a todo" value={value} onChange={handleInputChange} />
-        <button onClick={addTodo}>添 加</button>
+        <input
+          type="text"
+          placeholder="add a todo"
+          value={value}
+          aria-label="todo-input"
+          className={styles.todoInput}
+          onChange={handleInputChange}
+        />
+        <button className={styles.addBtn} onClick={addTodo}>添 加</button>
       </div>
       <h3 className={styles.title}>已完成</h3>
       <ul className={styles.donesList}>
