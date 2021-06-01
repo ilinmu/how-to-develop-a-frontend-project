@@ -6,7 +6,7 @@ function resolve(dir) {
 
 module.exports = {
   // The base URL your application bundle will be deployed at
-  publicPath: process.env.VUE_APP_BASE_API,
+  publicPath: process.env.PUBLIC_PATH,
   devServer: {
     // proxy API requests to the API server
     proxy: {
