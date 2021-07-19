@@ -2,6 +2,7 @@ html, body, ul {
   margin: 0;
   padding: 0;
 }
+
 .wrap {
   width: 100vw;
   height: 100vh;
@@ -10,13 +11,16 @@ html, body, ul {
   background: #6a7ece;
   overflow: hidden;
 }
+
 .title {
   color: #fff;
 }
+
 .todosList, .donesList {
   max-height: 80%;
   overflow-y: auto;
   list-style: none;
+
   li {
     height: 36px;
     line-height: 36px;
@@ -24,23 +28,28 @@ html, body, ul {
     margin-top: 6px;
     background: #fff;
     text-indent: 10px;
+  
     input[type="text"] {
       margin: 0 20px;
     }
+
     input[type="checkbox"] {
       margin: 0 10px;
     }
   }
 }
+
 .operate {
   height: 36px;
   margin-top: 8px;
   display: flex;
   width: 100%;
+
   input, button {
     line-height: 36px;
     border: none;
   }
+
   .todoInput {
     flex: 1;
     border-radius: 4px 0 0 4px;
@@ -48,6 +57,7 @@ html, body, ul {
     font-size: 14px;
     text-indent: 20px;
   }
+
   .addBtn {
     cursor: pointer;
     flex: 0 1 80px;
