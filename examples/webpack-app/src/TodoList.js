@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import styles from './todoListTest.scss';
+import styles from './todoList.scss';
 
 const TodoList = () => {
   const [todos, setTodos] = useState([]);
   const [dones, setDones] = useState([]);
   const [value, setValue] = useState('');
 
-  const handleInputChange = (e) => {
+  const handleChangeInput = (e) => {
     setValue(e.target.value);
   };
 
@@ -19,7 +19,25 @@ const TodoList = () => {
     }
   };
 
-  const addTodo = () => {
+  const handleAddTodo = () => {
+    const flag = true;
+    const tempList = [{
+      id: 1,
+      text: '01',
+    }];
+    let tempString = 'test';
+
+    console.warn('tempList 0', tempList);
+    console.warn('tempString 0', tempString);
+
+    tempList.push({
+      id: 2,
+      text: '02',
+    });
+    tempString = 'string';
+    console.warn('tempList 1', tempList);
+    console.warn('tempString 1', tempString);
+
     setTodos([
       ...todos,
       {
@@ -51,9 +69,9 @@ const TodoList = () => {
           value={value}
           aria-label="todo-input"
           className={styles.todoInput}
-          onChange={handleInputChange}
+          onChange={handleChangeInput}
         />
-        <button className={styles.addBtn} onClick={addTodo}>添 加</button>
+        <button className={styles.addBtn} onClick={handleAddTodo}>添 加</button>
       </div>
       <h3 className={styles.title}>已完成</h3>
       <ul className={styles.donesList}>
